@@ -13,11 +13,13 @@ for (let i = 0; i < textByLine.length; i++) {
     let char = splitPolicyPass[i][2];
     let pass = splitPolicyPass[i][3];
 
-    let nChar = pass.split(char).length - 1;
-    if (nChar <= highBound && nChar >= lowBound) {
+    let charAtLow = pass.charAt(lowBound - 1);
+    let charAtHigh = pass.charAt(highBound - 1)
+    if ((charAtLow == char || charAtHigh == char) && charAtLow != charAtHigh) {
         validPasswords++;
-        console.log("valid");
     }
+
 }
+
 
 console.log(validPasswords);
