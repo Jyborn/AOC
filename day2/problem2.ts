@@ -21,5 +21,4 @@ for (let i = 0; i < textByLine.length; i++) {
 
 }
 
-
 console.log(validPasswords);
